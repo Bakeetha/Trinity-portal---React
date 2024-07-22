@@ -44,9 +44,246 @@
     left: 0;
     right: 0;
     position: absolute;
-    height: 100px;
+    height: 100vh;
     background: url('./assets/svg/footer_top.svg') center bottom;
     z-index: 2;
     background-size: cover;
     bottom: -99px;
+
+
+    /* background-image: url('../assets/images/your-background-image.jpg'); Adjust the path to your background image */
+    background-position: center;
+
+}
+
+/* solar page state flip card */
+.perspective {
+    perspective: 1000px;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+.card {
+    width: 12rem;
+    height: 17rem;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.card-front {
+    background-color: #FFFFFFCC;
+    font-size: 100px;
+    line-height: 1;
+    text-align: center;
+    color: #333333;
+    border-color: #333333;
+}
+
+.card-back {
+    background-color: #FFFFFF;
+    /* bg-gray-200 */
+    transform: rotateY(180deg);
+    font-size: smaller;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+/* star rating solar */
+.star::before {
+    content: '\2606';
+    font-size: 2em;
+}
+
+.star.rated::before {
+    content: '\2605';
+    color: tomato;
+    font-size: 2em;
+}
+
+/*** Testimonial ***/
+.testimonial-left,
+.testimonial-right {
+    position: relative;
+}
+
+.testimonial-left img,
+.testimonial-right img {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 70px;
+}
+
+.testimonial-left img:nth-child(1),
+.testimonial-right img:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-left img:nth-child(2),
+.testimonial-right img:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.testimonial-left img:nth-child(3),
+.testimonial-right img:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.testimonial-carousel .testimonial-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #abb8c3;
+    border-radius: 60px;
+}
+
+.testimonial-carousel .owl-dots {
+    height: 40px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 2px solid #abb8c3;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    left: 5px;
+    border-radius: 16px;
+    background: #abb8c3;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot.active::after {
+    background: lightgray;
+}
+
+
+/* testimonial solar page */
+#slider-container article {
+    display: grid !important;
+    width: 20rem !important;
+    margin: 2rem auto;
+}
+
+.slick-slider .slick-arrow {
+    width: 40px;
+    height: 40px;
+    background: lightgray;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.slick-slider .slick-arrow:before {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.slick-slider .slick-dots button:before {
+    font-size: 1.5rem;
+    color: teal;
+}
+
+.slick-slider .slick-dots li.slick-active button::before {
+    color: teal;
+}
+
+.slick-slider .slick-dots li.slick-active button:hover {
+    color: teal;
+}
+
+.slick-slider .slick-dots {
+    bottom: 0px;
+}
+
+.slick-slider .slick-dots li {
+    margin: 0 0.5rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    line-height: 1.2;
+}
+
+/* roof tick icon */
+.roofing-system p:before {
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+    font-size: 1.14rem;
 }

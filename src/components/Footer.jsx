@@ -4,7 +4,7 @@ import darkgray_seal from '../assets/images/darkgray_seal.png';
 
 export default function Footer() {
     return (
-        <div >
+        <div className=''>
             <footer className='bg-[#333] w-full overflow-hidden justify-between pt-[50px] pb-0 
             bottom-[0] z-0 text-[#dbd7d7] pl-[0] pr-[0] py-[70px] block'>
                 {/* fixed  */}

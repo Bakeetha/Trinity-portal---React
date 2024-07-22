@@ -71,10 +71,10 @@ export default function Home() {
         <form className="flex [flex-flow:row_wrap] items-center mb-5" action="/get-solar" method="GET">
           <div className="mt-4 relative w-[22.85rem] m-auto">
             <input className="rounded-[100px] bg-[#eef3f7] border-[0] px-[20px] py-[10px] 
-            w-[21.42rem] outline-[0] h-[3.07rem]" maxlength="5" id="zip" name="zip"
+            w-[21.42rem] outline-[0] h-[3.07rem]" maxLength="5" id="zip" name="zip"
               pattern="[0-9]{5}" required="" type="number" placeholder="Enter Zip Code"
               aria-required="true" aria-invalid="false" />
-            <button class="px-[22px] py-[10px] bg-[#2ecc71] border-[1px] border-[solid] border-[#2ecc71] 
+            <button className="px-[22px] py-[10px] bg-[#2ecc71] border-[1px] border-[solid] border-[#2ecc71] 
             rounded-[100px] absolute right-[0] text-[#fff] leading-[1.57rem] h-[3.07rem] cursor-pointer inline-flex
              [transition:.4s] font-medium" type="submit">
               <FaSearch className='m-[5px]' /> Search
